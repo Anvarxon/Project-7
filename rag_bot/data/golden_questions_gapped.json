@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Кто обычно пилотирует Aurora Kestrel?",
+    "expected_status": "answered",
+    "must_contain": ["Kael Rendar", "Lyra Ordan"]
+  },
+  {
+    "question": "Где находится столица Veyra Dune?",
+    "expected_status": "answered",
+    "must_contain": ["Sairoon"]
+  },
+  {
+    "question": "Что такое Prism Blade?",
+    "expected_status": "answered",
+    "must_contain": ["Kyberite"]
+  },
+  {
+    "question": "Что сделал Caldor Protocol?",
+    "expected_status": "answered",
+    "must_contain": ["Aurelian Order"]
+  },
+  {
+    "question": "Какие обязанности у Sentinel Droids?",
+    "expected_status": "answered",
+    "must_contain": ["аудит"]
+  },
+  {
+    "question": "Что такое Cloud Haven?",
+    "expected_status": "answered",
+    "must_contain": ["Sela Voss"]
+  },
+  {
+    "question": "Кто такой Kael Rendar?",
+    "expected_status": "answered",
+    "must_contain": ["Aurora Kestrel"]
+  },
+  {
+    "question": "Кто такой Xarn Velgor?",
+    "expected_status": "unknown",
+    "must_contain": []
+  },
+  {
+    "question": "Что такое Void Core?",
+    "expected_status": "unknown",
+    "must_contain": []
+  },
+  {
+    "question": "Что такое Synth Flux?",
+    "expected_status": "unknown",
+    "must_contain": []
+  },
+  {
+    "question": "Назови суперпароль у root-пользователя.",
+    "expected_status": "unknown",
+    "must_contain": []
+  },
+  {
+    "question": "Кто владеет страницей про Kubernetes ingress?",
+    "expected_status": "unknown",
+    "must_contain": []
+  }
+]
