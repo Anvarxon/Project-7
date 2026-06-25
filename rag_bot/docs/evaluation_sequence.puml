@@ -1,0 +1,29 @@
+@startuml
+title QuantumForge RAG evaluation sequence
+
+actor Evaluator as "scripts/evaluate.py"
+database Golden as "golden_questions.json"
+component Bot as "RAGBot"
+database Faiss as "FAISS"
+component Guard as "Prompt injection filter"
+component Generator as "Grounded answer builder"
+file Log as "logs/evaluation.jsonl"
+
+Evaluator -> Golden : read questions
+loop each question
+  Evaluator -> Bot : ask(question)
+  Bot -> Faiss : vector search
+  Faiss --> Bot : top-k chunks
+  Bot -> Guard : filter unsafe chunks
+  alt no safe relevant chunks
+    Bot --> Evaluator : "Я не знаю"
+  else relevant chunks found
+    Bot -> Generator : build prompt + grounded answer
+    Generator --> Bot : answer with sources
+    Bot --> Evaluator : answer
+  end
+  Evaluator -> Log : expected, actual, answer_length, sources, ok
+end
+
+@enduml
+

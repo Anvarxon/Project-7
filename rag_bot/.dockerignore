@@ -1,0 +1,7 @@
+indexes/
+logs/
+__pycache__/
+*.pyc
+.venv/
+.cache/
+

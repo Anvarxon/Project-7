@@ -1,0 +1,24 @@
+@startuml
+title QuantumForge RAG daily index update
+
+actor Scheduler as "cron / Windows Task Scheduler"
+database Docs as "data/knowledge_base/*.md"
+file Malicious as "malicious_prompt_injection.md"
+component Updater as "scripts/update_index.py"
+component Splitter as "Chunking\nRecursiveCharacterTextSplitter"
+component Embeddings as "Embedding model\nall-MiniLM-L6-v2 or hashing fallback"
+database Faiss as "FAISS index\nfaiss.index + metadata.json"
+file Manifest as "manifest.json"
+file Logs as "logs/update_index.jsonl"
+
+Scheduler -> Updater : daily 06:00
+Docs -> Updater : scan hashes
+Malicious -> Updater : included for security test
+Updater -> Splitter : changed/new docs
+Splitter -> Embeddings : chunks
+Embeddings -> Faiss : vectors + metadata
+Updater -> Manifest : write current hashes
+Updater -> Logs : status, chunks, errors
+
+@enduml
+

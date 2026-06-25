@@ -1,0 +1,16 @@
+services:
+  rag-bot:
+    build:
+      context: ./rag_bot
+    container_name: quantumforge-rag-bot
+    environment:
+      QF_EMBEDDING_BACKEND: hashing
+      QF_INDEX_DIR: /app/indexes/default
+      QF_LOG_DIR: /app/logs
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./rag_bot/data:/app/data:ro
+      - ./rag_bot/indexes:/app/indexes
+      - ./rag_bot/logs:/app/logs
+

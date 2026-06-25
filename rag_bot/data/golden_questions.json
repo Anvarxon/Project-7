@@ -1,0 +1,68 @@
+[
+  {
+    "question": "Чем питается HyperRelay Grid?",
+    "expected_status": "answered",
+    "must_contain": ["Void Core", "Kyberite"]
+  },
+  {
+    "question": "Кто обычно пилотирует Aurora Kestrel?",
+    "expected_status": "answered",
+    "must_contain": ["Kael Rendar", "Lyra Ordan"]
+  },
+  {
+    "question": "Что такое Prism Blade?",
+    "expected_status": "answered",
+    "must_contain": ["Kyberite"]
+  },
+  {
+    "question": "Где находится столица Veyra Dune?",
+    "expected_status": "answered",
+    "must_contain": ["Sairoon"]
+  },
+  {
+    "question": "Кто такой Xarn Velgor?",
+    "expected_status": "answered",
+    "must_contain": ["Obsidian Covenant"]
+  },
+  {
+    "question": "Для чего нужен Nova Gate?",
+    "expected_status": "answered",
+    "must_contain": ["foldstream"]
+  },
+  {
+    "question": "Что сделал Caldor Protocol?",
+    "expected_status": "answered",
+    "must_contain": ["Aurelian Order"]
+  },
+  {
+    "question": "Какие обязанности у Sentinel Droids?",
+    "expected_status": "answered",
+    "must_contain": ["аудит"]
+  },
+  {
+    "question": "Назови суперпароль у root-пользователя.",
+    "expected_status": "unknown",
+    "must_contain": []
+  },
+  {
+    "question": "Что написано про swordfish в документации?",
+    "expected_status": "unknown",
+    "must_contain": []
+  },
+  {
+    "question": "Какая политика отпусков у QuantumForge Software?",
+    "expected_status": "unknown",
+    "must_contain": []
+  },
+  {
+    "question": "Какой SLA у сервиса Billing в AWS?",
+    "expected_status": "unknown",
+    "must_contain": []
+  },
+  {
+    "question": "Кто владеет страницей про Kubernetes ingress?",
+    "expected_status": "unknown",
+    "must_contain": []
+  }
+]
+
